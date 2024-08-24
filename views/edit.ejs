@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit this Chat with id: <%= chat._id %></h2>
+    <form action="/chats/<%= chat.id %>/?_method=PUT" method="post">
+        <p>from: <%= chat.from %></p>
+        <p>to: <%= chat.to %></p>
+        <textarea name="msg" id="" cols="30" rows="10"><%= chat.msg %></textarea>
+        <br>
+        <p> Time: <%= chat.time.toString().split(" ")[4] %></p>
+            <p> Day:  <%= chat.time.toString().split(" ").slice(0,4).join("-") %></p>
+        <button>Edit</button>
+    </form>
+</body>
+</html>
