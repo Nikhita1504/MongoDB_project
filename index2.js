@@ -106,6 +106,7 @@ app.listen(PORT, () => {
 app.post("/chats/post",(req,res)=>{
     res.send("added")
 })
+
 // let chat1=new Chat({
 //     from:"Nikhita",
 //     to:"Harsh",
